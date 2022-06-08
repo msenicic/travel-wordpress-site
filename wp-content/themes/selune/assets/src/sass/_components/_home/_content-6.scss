@@ -1,0 +1,116 @@
+.content-6 {
+  padding: 50px 20px;
+
+  @include media-up(xl) {
+    padding: 50px 5%;
+  }
+
+  .container {
+    text-align: center;
+    text-transform: capitalize;
+    color: $text-color;
+    position: relative;
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .carousel {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      overflow: hidden;
+
+      .slider {
+        display: flex;
+        transition: 0.5s;
+        flex-shrink: 0;
+
+        @include media-up(m) {
+          flex-shrink: 1;
+          position: relative;
+          left: -50%;
+        }
+
+        @include media-up(l) {
+          left: -33.3333%;
+        }
+
+        .block {
+          flex: 1;
+          flex-shrink: 0;
+          margin: 0 1%;
+
+          .image {
+            display: flex;
+            align-items: center;
+
+            img {
+              margin-right: 10px;
+              border-radius: 50%;
+              object-fit: cover;
+              width: 70px;
+              height: 70px;
+            }
+
+            .actor {
+              p {
+                margin: 0;
+                color: $title-color;
+              }
+            }
+          }
+
+          .text {
+            padding: 20px;
+            text-align: left;
+            background-color: $background-color;
+            border-radius: 10px;
+            border-bottom-left-radius: 0;
+            font-size: 14px;
+            margin-bottom: 30px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              background-color: $background-color;
+              left: 6px;
+              bottom: -15px;
+              transform: rotate(45deg);
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      z-index: 100;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &.fa-chevron-right {
+        right: 0;
+      }
+
+      &.fa-chevron-left {
+        left: 0;
+      }
+
+      &:hover {
+        color: $title-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.content-4 {
+  padding: 50px 20px;
+
+  @include media-up(xl) {
+    padding: 50px 5%;
+  }
+
+  .container {
+    text-align: center;
+    text-transform: capitalize;
+
+    .title {
+      color: $text-color;
+      margin-bottom: 20px;
+    }
+
+    .carousel {
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+
+      .slider {
+        display: flex;
+        transition: 0.5s;
+        flex-shrink: 0;
+
+        @include media-up(s) {
+          flex-shrink: 1;
+          position: relative;
+          left: -50%;
+        }
+
+        @include media-up(m) {
+          left: -33.3333%;
+        }
+
+        @include media-up(l) {
+          left: -25%;
+        }
+
+        .block {
+          border: 1px solid $text-color;
+          flex: 1;
+          flex-shrink: 0;
+          @include media-up(s) {
+            margin: 0 1%;
+          }
+
+          &.message {
+            border: none;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+              color: $title-color;
+            }
+          }
+
+          .image {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+
+            .icons {
+              display: flex;
+              position: absolute;
+              left: 50%;
+              bottom: 20px;
+              transition: 0.5s;
+              transform: translate(-50%, calc(100% + 20px));
+
+              .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                margin: 0 5px;
+                background-color: $text-color;
+                color: #fff;
+                transition: 0.5s;
+
+                &:hover {
+                  cursor: pointer;
+                  background-color: $title-color;
+                }
+              }
+            }
+          }
+
+          .text {
+            padding: 10px 0;
+
+            p {
+              margin: 5px 0;
+              font-size: 20px;
+              color: $title-color;
+            }
+
+            i {
+              font-size: 16px;
+              -webkit-text-stroke-width: 1.5px;
+              -webkit-text-stroke-color: $text-color;
+            }
+          }
+        }
+
+        //.block:hover {
+        //  .icons {
+        //    transform: translate(-50%, 0);
+        //  }
+        //}
+      }
+
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        z-index: 100;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &.fa-chevron-right {
+          right: 10px;
+
+          @include media-up(s) {
+            right: 20px;
+          }
+          @include media-up(m) {
+            right: 25px;
+          }
+          @include media-up(l) {
+            right: 30px;
+          }
+        }
+
+        &.fa-chevron-left {
+          left: 10px;
+
+          @include media-up(s) {
+            left: 20px;
+          }
+          @include media-up(m) {
+            left: 25px;
+          }
+          @include media-up(l) {
+            left: 30px;
+          }
+        }
+
+        &:hover {
+          color: $title-color;
+        }
+      }
+    }
+  }
+}

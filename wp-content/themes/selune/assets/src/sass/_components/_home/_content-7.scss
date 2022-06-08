@@ -1,0 +1,101 @@
+.content-7 {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: $background-color;
+
+  @include media-up(xl) {
+    padding: 30px 5%;
+  }
+
+  .container {
+    text-transform: capitalize;
+
+    .title {
+      margin-bottom: 30px;
+      color: $text-color;
+    }
+
+    .blocks {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+
+      .block {
+        max-width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid $text-color;
+        border-radius: 5px;
+        margin: 0 0 2% 0;
+        transition: 0.5s;
+
+        @include media-up(s) {
+          max-width: 48%;
+          margin: 0 1% 2% 1%;
+        }
+        @include media-up(l) {
+          margin: 0 0.5% 1% 0.5%;
+          max-width: 32.333%;
+        }
+        @include media-up(xl) {
+          max-width: 24%;
+        }
+
+        .button {
+          margin-top: 30px;
+          margin-bottom: 10px;
+
+          a {
+            padding: 10px 25px;
+            border: 2px solid $text-color;
+            transition: 0.5s;
+
+            &:hover {
+              background-color: #fff;
+              color: $text-color;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $text-color;
+          .text {
+            color: #fff;
+          }
+          a {
+            color: #fff;
+            border: 2px solid #fff;
+          }
+          img {
+            filter: invert(100%);
+          }
+        }
+
+        .image {
+          margin-bottom: 20px;
+
+          img {
+            object-fit: cover;
+            height: 100px;
+          }
+        }
+
+        .text {
+          color: $text-color;
+
+          p {
+            font-size: 15px;
+            margin: 15px 0;
+          }
+
+          h3 {
+            color: $title-color;
+          }
+        }
+      }
+    }
+  }
+}

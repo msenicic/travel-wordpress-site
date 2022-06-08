@@ -1,0 +1,84 @@
+footer {
+  padding: 50px 20px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-transform: capitalize;
+  color: #fff;
+
+  @include media-up(xl) {
+    padding: 50px 5%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      @include media-up(m) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+      }
+
+      .block {
+        margin-bottom: 20px;
+        flex: 1;
+        max-width: 300px;
+        min-width: 250px;
+
+        .title {
+          margin-bottom: 10px;
+        }
+
+        .list {
+          ul {
+            list-style: none;
+
+            li {
+              margin-bottom: 10px;
+
+              a {
+                color: #fff;
+                transition: 0.5s;
+
+                &:hover {
+                  color: $title-color;
+
+                  i {
+                    margin-right: 20px;
+                  }
+                }
+
+                i {
+                  margin-right: 10px;
+                  color: $title-color;
+                  transition: 0.5s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .text {
+      font-size: 20px;
+
+      span {
+        color: $title-color;
+      }
+    }
+  }
+}

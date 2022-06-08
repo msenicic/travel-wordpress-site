@@ -1,0 +1,80 @@
+.content-3 {
+  padding: 50px 20px;
+  background-color: $background-color;
+
+  @include media-up(xl) {
+    padding: 50px 5%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media-up(m) {
+      flex-direction: row;
+    }
+
+    .image {
+      padding: 0 40px 40px 0;
+      flex: 1;
+      margin-bottom: 30px;
+
+      @include media-up(m) {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+
+      @include media-up(xl) {
+        max-width: 45%;
+      }
+
+      img {
+        box-shadow: 40px 40px 0 #0000001a;
+      }
+    }
+
+    .text {
+      flex: 1;
+      text-transform: capitalize;
+
+      @include media-up(xl) {
+        max-width: 45%;
+      }
+
+      p {
+        font-size: 14px;
+        color: $text-color;
+
+        @include media-up(m) {
+          font-size: 16px;
+        }
+      }
+
+      h2 {
+        color: $title-color;
+        margin-bottom: 10px;
+
+        @include media-up(m) {
+          font-size: 30px;
+        }
+      }
+
+      .button {
+        margin-top: 30px;
+
+        a {
+          padding: 10px 25px;
+          border: 1px solid $text-color;
+          transition: 0.5s;
+
+          &:hover {
+            background-color: $text-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

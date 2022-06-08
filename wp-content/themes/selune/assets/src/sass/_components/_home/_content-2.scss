@@ -1,0 +1,82 @@
+.content-2 {
+  text-align: center;
+  padding: 50px 40px 20px 40px;
+
+  @include media-up(xl) {
+    padding: 50px 5% 20px 5%;
+  }
+
+  .container {
+    text-transform: capitalize;
+
+    .title {
+      margin-bottom: 30px;
+      color: $text-color;
+    }
+
+    .blocks {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+
+      @include media-up(m) {
+        justify-content: space-evenly;
+      }
+
+      .block {
+        max-width: 100%;
+        margin-bottom: 50px;
+
+        @include media-up(m) {
+          max-width: 300px;
+        }
+
+        .image {
+          margin-bottom: 10px;
+
+          img {
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+
+            @include media-up(l) {
+              width: 200px;
+              height: 200px;
+            }
+          }
+        }
+
+        .text {
+          h4 {
+            color: $title-color;
+            margin-bottom: 15px;
+          }
+
+          p {
+            font-size: 14px;
+            margin: 0;
+            color: $text-color;
+          }
+        }
+
+        .button {
+          margin-top: 30px;
+
+          a {
+            padding: 10px 25px;
+            border: 1px solid $text-color;
+            transition: 0.5s;
+
+            &:hover {
+              background-color: $text-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

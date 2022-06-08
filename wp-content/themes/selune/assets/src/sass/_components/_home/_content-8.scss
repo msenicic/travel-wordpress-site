@@ -1,0 +1,138 @@
+.content-8 {
+  padding: 50px 20px;
+
+  @include media-up(xl) {
+    padding: 50px 5%;
+  }
+
+  .container {
+    text-align: center;
+    text-transform: capitalize;
+    color: $text-color;
+    position: relative;
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .carousel {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      overflow: hidden;
+
+      .slider {
+        display: flex;
+        transition: 0.5s;
+        flex-shrink: 0;
+
+        @include media-up(m) {
+          flex-shrink: 1;
+          position: relative;
+          left: -50%;
+        }
+
+        @include media-up(l) {
+          left: -33.3333%;
+        }
+
+        .block {
+          flex: 1;
+          flex-shrink: 0;
+          margin: 0 1%;
+
+          .button {
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+            a {
+              padding: 10px 25px;
+              border: 2px solid $text-color;
+              transition: 0.5s;
+
+              //&:hover {
+              // background-color: $text-color;
+              // color: #fff;
+              //}
+            }
+          }
+
+          .image {
+            margin-bottom: 40px;
+            position: relative;
+
+            .box {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 60%;
+              min-width: 250px;
+              padding: 10px;
+              background-color: $text-color;
+              position: absolute;
+              color: #fff;
+              font-size: 14px;
+              border-radius: 5px;
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%, 50%);
+
+              .fas {
+                color: $title-color;
+              }
+
+              .icon {
+                display: flex;
+                align-items: center;
+
+                p {
+                  margin: 0;
+                  margin-left: 10px;
+                }
+              }
+            }
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 220px;
+              border-radius: 5px;
+            }
+          }
+
+          .text {
+            color: $text-color;
+
+            p {
+              font-size: 15px;
+              margin: 15px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      z-index: 100;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &.fa-chevron-right {
+        right: 0;
+      }
+
+      &.fa-chevron-left {
+        left: 0;
+      }
+
+      &:hover {
+        color: $title-color;
+      }
+    }
+  }
+}

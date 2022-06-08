@@ -1,0 +1,76 @@
+.content-10 {
+  padding: 50px 20px;
+
+  @include media-up(xl) {
+    padding: 50px 5%;
+  }
+
+  .container {
+    position: relative;
+
+    .carousel {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+      display: flex;
+      overflow: hidden;
+
+      .slider {
+        display: flex;
+        transition: 0.5s;
+        flex-shrink: 0;
+
+        @include media-up(s) {
+          flex-shrink: 1;
+          position: relative;
+          left: -50%;
+        }
+
+        @include media-up(m) {
+          left: -33.3333%;
+        }
+
+        @include media-up(l) {
+          left: -25%;
+        }
+
+        .block {
+          display: flex;
+          justify-content: center;
+          flex: 1;
+          flex-shrink: 0;
+          @include media-up(s) {
+            margin: 0 1%;
+          }
+
+          img {
+            object-fit: cover;
+            height: 150px;
+          }
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      z-index: 100;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &.fa-chevron-right {
+        right: 0;
+      }
+
+      &.fa-chevron-left {
+        left: 0;
+      }
+
+      &:hover {
+        color: $title-color;
+      }
+    }
+  }
+}

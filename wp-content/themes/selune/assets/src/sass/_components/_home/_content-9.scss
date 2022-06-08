@@ -1,0 +1,50 @@
+.content-9 {
+  padding: 70px 20px;
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  text-transform: capitalize;
+
+  @include media-up(xl) {
+    padding: 70px 5%;
+  }
+
+  .text {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  form {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 40px;
+    border: 2px solid $text-color;
+    background-color: #fff;
+
+    button {
+      width: 180px;
+      border-radius: 30px;
+      color: #fff;
+      background-color: $text-color;
+      border: none;
+      outline: none;
+      padding: 10px 0;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      padding: 0 10px;
+    }
+  }
+}

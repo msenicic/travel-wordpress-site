@@ -1,0 +1,128 @@
+.content-1 {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+
+  .slider {
+    min-height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+    transition: 1s;
+
+    .pages {
+      padding: 20px;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: right;
+      flex-shrink: 0;
+      flex: 1;
+
+      @include media-up(l) {
+        background-position: center;
+        padding: 20px 80px 20px 120px;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-up(l) {
+          justify-content: flex-end;
+        }
+
+        .text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          text-transform: capitalize;
+          max-width: 500px;
+
+          @include media-up(l) {
+            text-align: left;
+            align-items: flex-start;
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 2;
+
+            @include media-up(l) {
+              font-size: 16px;
+            }
+          }
+
+          h1 {
+            text-transform: uppercase;
+            color: $title-color;
+            font-size: 35px;
+            margin: 5px 0;
+
+            @include media-up(l) {
+              font-size: 50px;
+            }
+          }
+
+          p:nth-child(1) {
+            font-size: 26px;
+            line-height: 1;
+
+            @include media-up(l) {
+              font-size: 35px;
+            }
+          }
+
+          .button {
+            margin-top: 30px;
+
+            a {
+              padding: 10px 25px;
+              border: 1px solid $text-color;
+              transition: 0.5s;
+
+              //&:hover {
+              //  background-color: $text-color;
+              //  color: #fff;
+              //}
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &.fa-chevron-right {
+      right: 10px;
+    }
+
+    &.fa-chevron-left {
+      left: 10px;
+    }
+
+    &:hover {
+      color: $title-color;
+    }
+
+    @include media-up(m) {
+      opacity: 1;
+    }
+  }
+}
